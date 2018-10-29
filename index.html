@@ -10,14 +10,16 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  js.src = 'https://connect.facebook.net/pt_BR/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- Your customer chat code -->
 <div class="fb-customerchat"
   attribution=setup_tool
-  page_id="728424044177110">
+  page_id="728424044177110"
+  logged_in_greeting="Olá! Como posso ajudar?"
+  logged_out_greeting="Olá! Como posso ajudar?">
 </div>
 SEÇÃO 1 - O QUE FAREMOS COM ESTA INFORMAÇÃO?
 Quando você realiza alguma transação com nossa loja, como parte do processo de compra e venda, coletamos as informações pessoais que você nos dá tais como: nome, e-mail e endereço.
