@@ -1,3 +1,6 @@
 .sortable-handler {
   touch-action: none;
 }
+.owl-carousel {
+  touch-action: none;
+}
