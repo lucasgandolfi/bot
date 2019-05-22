@@ -28,7 +28,29 @@
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+	
+	FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+	
+	
+<fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
+	
+	
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
 </script>
+	   
+	   
+
+	   
+	   
 	   
 	   <h1>Você corre à frente? — Faz isso como pastor? Ou como exceção? Um terceiro caso seria desertor… Primeira questão de consciência.</h1>
 <script type="text/javascript" src="https://cronchatunip.cronapp.io/get-chat?token=700227513:AAFxZvq89wpl_7K40inPfouB7hg011flrHo"></script>	</body>
