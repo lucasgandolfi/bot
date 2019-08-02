@@ -4,7 +4,9 @@ html {
   margin: 0;
   height: 100%;
 }
-
+.chat-button {
+    background-color: #015fa4 !important;
+}
 #messageUs {
 	position: absolute;
 	bottom: 20px;
