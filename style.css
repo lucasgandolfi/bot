@@ -6,7 +6,6 @@ html {
 }
 .chat-button {
     background-color: #2e1654 !important;
-    z-index: 9999 !important;
 }
 #messageUs {
 	position: absolute;
