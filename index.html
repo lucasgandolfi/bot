@@ -9,9 +9,12 @@
 </body>
 
 <script type="text/javascript">
-	document.cookie = "token=T0K3N";
+	document.cookie = "token=T0K3N1";
+	document.cookie = "token=T0K3N2";
+	document.cookie = "token=T0K3N3";
 	let cookies = document.cookie;
     let cookieArray = cookies.split(';');
+    console.log(cookieArray);
 	for(var i=0; i<cookieArray.length; i++) {
 		name = cookieArray[i].split('=')[0];
 		value = cookieArray[i].split('=')[1];
