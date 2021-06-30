@@ -27,7 +27,7 @@
 	console.log("tokenURL: " + tokenUrl);
     let chatbotTOKEN = '666';
     let hostURL = 'https://cronchatcronapp.cronapp.io/get-chat?token=';
-    let chatbotURL = ${hostURL}${chatbotTOKEN}&extraparam=${tokenUrl};
+    let chatbotURL = `${hostURL}${chatbotTOKEN}&extraparam=${tokenUrl}`;
     let scriptHTML = document.createElement("script");
     scriptHTML.src = chatbotURL;
     scriptHTML.type = 'text/javascript'
