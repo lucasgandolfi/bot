@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-	<title></title>
+	<meta charset="utf-8">
+	<title>READING COOKIES</title>
 </head>
 <body>
-	
-<script type="text/javascript" src="https://cronchatcronapp.cronapp.io/get-chat?token=666"></script>
-	
-	</body></html>
+
+</body>
+
+<script type="text/javascript">
+	document.cookie = "token=T0K3N";
+	let cookies = document.cookie;
+    let cookieArray = cookies.split(';');
+	for(var i=0; i<cookieArray.length; i++) {
+		name = cookieArray[i].split('=')[0];
+		value = cookieArray[i].split('=')[1];
+		console.log("Key is : " + name + " and Value is : " + value);
+	}
+
+</script>
+</html>
