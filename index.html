@@ -9,17 +9,30 @@
 </body>
 
 <script type="text/javascript">
-	document.cookie = "token=T0K3N1";
-	document.cookie = "token=T0K3N2";
-	document.cookie = "token=T0K3N3";
+	var tokenUrl;
+	document.cookie = "token1=T0K3N1";
+	document.cookie = "token2=T0K3N2";
+	document.cookie = "token3=T0K3N3";
 	let cookies = document.cookie;
     let cookieArray = cookies.split(';');
     console.log(cookieArray);
 	for(var i=0; i<cookieArray.length; i++) {
 		name = cookieArray[i].split('=')[0];
 		value = cookieArray[i].split('=')[1];
-		console.log("Key is : " + name + " and Value is : " + value);
+		if(name == 'token2')
+		{
+			tokenUrl = value;
+		}
 	}
-
+	console.log("tokenURL: " + tokenUrl);
+    let chatbotTOKEN = '666';
+    let hostURL = 'https://cronchatcronapp.cronapp.io/get-chat?token=';
+    let chatbotURL = ${hostURL}${chatbotTOKEN}&extraparam=${tokenUrl};
+    let scriptHTML = document.createElement("script");
+    scriptHTML.src = chatbotURL;
+    scriptHTML.type = 'text/javascript'
+    console.log("scriptHtml: " + scriptHTML);
+    console.log("chatbotURL: " + chatbotURL);
+    document.body.appendChild(scriptHTML);
 </script>
 </html>
