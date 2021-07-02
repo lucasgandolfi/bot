@@ -8,52 +8,5 @@
 
 </body>
 
-<script type="text/javascript">
-	function getCookie(name) {
-    // Split cookie string and get all individual name=value pairs in an array
-    var cookieArr = document.cookie.split(";");
-    
-    // Loop through the array elements
-    for(var i = 0; i < cookieArr.length; i++) {
-        var cookiePair = cookieArr[i].split("=");
-        
-        /* Removing whitespace at the beginning of the cookie name
-        and compare it with the given string */
-        if(name == cookiePair[0].trim()) {
-            // Decode the cookie value and return
-            return decodeURIComponent(cookiePair[1]);
-        }
-    }
-    
-    // Return null if not found
-    return null;
-}
-
-	var tokenUrl;
-	document.cookie = "token1=T0K3N1";
-	document.cookie = "token2=T0K3N2";
-	document.cookie = "token3=T0K3N3";
-	let cookies = document.cookie;
-    let cookieArray = cookies.split(';');
-    console.log(cookieArray);
-	/*for(var i=0; i<cookieArray.length; i++) {
-		name = cookieArray[i].split('=')[0];
-		value = cookieArray[i].split('=')[1];
-		if(name == 'token2')
-		{
-			tokenUrl = value;
-		}
-	}*/
-	tokenUrl = getCookie('token2');
-	console.log("tokenURL: " + tokenUrl);
-    let chatbotTOKEN = '666';
-    let hostURL = 'https://cronchatcronapp.cronapp.io/get-chat?token=';
-    let chatbotURL = `${hostURL}${chatbotTOKEN}&extraparam=${tokenUrl}`;
-    let scriptHTML = document.createElement("script");
-    scriptHTML.src = chatbotURL;
-    scriptHTML.type = 'text/javascript'
-    console.log("scriptHtml: " + scriptHTML);
-    console.log("chatbotURL: " + chatbotURL);
-    document.body.appendChild(scriptHTML);
-</script>
+<script type="text/javascript" src="https://cronchatcronapp.cronapp.io/get-chat?token=666"></script>
 </html>
