@@ -8,49 +8,28 @@
 
 </body>
 <script type="text/javascript">
-	function getCookie(name) {
-    // Split cookie string and get all individual name=value pairs in an array
-    var cookieArr = document.cookie.split(";");
 
-    // Loop through the array elements
+    function getCookie(name) {
+    var cookieArr = document.cookie.split(";");
     for(var i = 0; i < cookieArr.length; i++) {
         var cookiePair = cookieArr[i].split("=");
-
-        /* Removing whitespace at the beginning of the cookie name
-        and compare it with the given string */
-        if(name == cookiePair[0].trim()) {
-            // Decode the cookie value and return
-            return decodeURIComponent(cookiePair[1]);
-        }
+            if(name == cookiePair[0].trim()) {
+                return decodeURIComponent(cookiePair[1]);
+            }
     }
-
-    // Return null if not found
     return null;
 }
-
-	var URLToken;
-	document.cookie = "PORTAL_INTEGRACAO=404f288a-3443-44f2-98c0-1108f94c33d6";
-	let cookies = document.cookie;
+    var URLToken;
+    document.cookie = "PORTAL_INTEGRACAO=404f288a-3443-44f2-98c0-1108f94c33d6";
+    let cookies = document.cookie;
     let cookieArray = cookies.split(';');
-    console.log(cookieArray);
-	/*for(var i=0; i<cookieArray.length; i++) {
-		name = cookieArray[i].split('=')[0];
-		value = cookieArray[i].split('=')[1];
-		if(name == 'token2')
-		{
-			URLToken = value;
-		}
-	}*/
-	URLToken = getCookie('PORTAL_INTEGRACAO');
-	console.log("URLToken: " + URLToken);
+    URLToken = getCookie('PORTAL_INTEGRACAO');
     let cronchatToken = '1472206690:AAHvf3I2OtwcXwFcHmwTzQHcs3JqcC2K7t0';
     let hostURL = 'https://cronchatcronapp.cronapp.io/get-chat?token=';
     let chatbotURL = `${hostURL}${cronchatToken}&extraparam=${URLToken}`;
     let scriptHTML = document.createElement("script");
     scriptHTML.src = chatbotURL;
     scriptHTML.type = 'text/javascript'
-    console.log("scriptHtml: " + scriptHTML);
-    console.log("chatbotURL: " + chatbotURL);
     document.body.appendChild(scriptHTML);
 </script>
 
