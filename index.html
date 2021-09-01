@@ -20,17 +20,15 @@
     return null;
 }
     var URLToken;
-    document.cookie = "PORTAL_INTEGRACAO=bafcc2a7-17c3-4c01-a523-3fe8e1551ca1";
     let cookies = document.cookie;
     let cookieArray = cookies.split(';');
     URLToken = getCookie('PORTAL_INTEGRACAO');
     let cronchatToken = '1472206690:AAHvf3I2OtwcXwFcHmwTzQHcs3JqcC2K7t0';
-    let hostURL = 'https://cronchatcronapp.cronapp.io/get-chat?token=';
+    let hostURL = 'https://cronchat-puc-campinas.cronapp.io/get-chat?token=';
     let chatbotURL = `${hostURL}${cronchatToken}&extraparam=${URLToken}`;
     let scriptHTML = document.createElement("script");
     scriptHTML.src = chatbotURL;
     scriptHTML.type = 'text/javascript'
     document.body.appendChild(scriptHTML);
 </script>
-
 </html>
