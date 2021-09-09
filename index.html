@@ -1,35 +1,11 @@
 <!DOCTYPE html>
 <html>
-<div style="background-image: url('https://raw.githubusercontent.com/lucasgandolfi/botsplayground/master/bg.jpg);">
 <head>
-    <meta charset="utf-8">
-    <title>ORQUESTRA SINFÔNICA. DOESTADO DE SÃO PAULO – OSESP/title>
+	<title></title>
 </head>
 <body>
+<img src="https://raw.githubusercontent.com/lucasgandolfi/botsplayground/master/bg.jpg">
+<script type="text/javascript" src="https://cronchatcronapp.cronapp.io/get-chat?token=1067192304:AAGRvf6zHzXhqVRj_O7lcJsV02XqD8jRj54"></script>
 
 </body>
-<script type="text/javascript">
-
-    function getCookie(name) {
-    var cookieArr = document.cookie.split(";");
-    for(var i = 0; i < cookieArr.length; i++) {
-        var cookiePair = cookieArr[i].split("=");
-            if(name == cookiePair[0].trim()) {
-                return decodeURIComponent(cookiePair[1]);
-            }
-    }
-    return null;
-}
-    var URLToken;
-    let cookies = document.cookie;
-    let cookieArray = cookies.split(';');
-    URLToken = getCookie('PORTAL_INTEGRACAO');
-    let cronchatToken = '1067192304:AAGRvf6zHzXhqVRj_O7lcJsV02XqD8jRj54';
-    let hostURL = 'https://cronchatcronapp.cronapp.io/get-chat?token=';
-    let chatbotURL = `${hostURL}${cronchatToken}&extraparam=${URLToken}`;
-    let scriptHTML = document.createElement("script");
-    scriptHTML.src = chatbotURL;
-    scriptHTML.type = 'text/javascript'
-    document.body.appendChild(scriptHTML);
-</script>
 </html>
